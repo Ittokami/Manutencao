@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.Views.LoginPage"
+             BackgroundImageSource="Backgrd"
+             NavigationPage.HasNavigationBar="False">
+
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid>
+                    <StackLayout Padding="0" Margin="1,80,1,0" HorizontalOptions="FillAndExpand">
+                        <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+
+                            <StackLayout>
+
+                                <StackLayout Margin="10">
+                                    <Label Text="FAZER LOGIN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="34" FontAttributes="Bold"/>
+                                </StackLayout>
+
+                                <StackLayout Padding="0" Margin="10,1">
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="40">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="DarkGray" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="1">
+                                                <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+
+                                            <Entry Keyboard="Chat" Placeholder="Nº de Usuário" x:Name="txtUsuario" TextColor="DarkGray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,10,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,10,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="40">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="LightGray" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="1">
+                                                <Image Source="senha" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+
+                                            <Entry Keyboard="Chat" Placeholder="Senha" x:Name="txtSenha" IsPassword="True" TextColor="DarkGray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,10,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Button Text="ENTRAR" BackgroundColor="Cyan" TextColor="White" CornerRadius="30" Clicked="BtnLogin_Clicked" Margin="1,10,1,1" />
+                                                                       
+                                    <Image Source="ManutencaoIcon" />
+
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>

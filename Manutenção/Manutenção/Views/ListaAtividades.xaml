@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.Views.ListaAtividades"
+             x:Name="Pagina"
+             BackgroundColor="#18191A">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Atualizar"
+                     IconImageSource="{OnPlatform Android=refresh24, UWP=Assets/refresh24.png}"
+                     Command="{Binding AtualizarLista}"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <SearchBar  Placeholder="Busque por Descrição" PlaceholderColor="White" TextColor="White" Text="{Binding ParametroBusca }" />
+                <Button Text="Buscar"  Command="{Binding Buscar}" />
+            </StackLayout>
+
+
+            <RefreshView IsRefreshing="{Binding EstaAtualizando, Mode=OneWay}"
+                         Command="{Binding AtualizarLista}">
+
+                <ListView ItemsSource="{Binding ListaAtividades}">
+                    <ListView.Header>
+                            <Grid RowDefinitions="Auto"
+                                  ColumnDefinitions="Auto"
+                                  VerticalOptions="Center">
+
+                            <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center" Grid.Column="0" Text="Nº"/>
+                            <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center" Grid.Column="1" Text="Data:" />
+                            <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center" Grid.Column="2" Text="Máquina" />
+                            <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center" Grid.Column="3" Text="Realizado:"/>
+                        </Grid>
+                        
+                        </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Detalhes"
+                                              Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.AbrirDetalhesAtividade }"
+                                              CommandParameter="{Binding Id}"/>
+
+                                    <MenuItem Text="Excluir"
+                                              Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.Remover }"
+                                              CommandParameter="{Binding Id}"/>
+                                </ViewCell.ContextActions>
+
+                                <Grid RowDefinitions="Auto" 
+                                      ColumnDefinitions="Auto"
+                                      VerticalOptions="Center"
+                                      Padding="1"
+                                      BackgroundColor="#111b21">
+
+                                    <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center"  Grid.Column="0" Text="{Binding Id} "/>
+                                    <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center"  Grid.Column="1" Text="{Binding Data1, StringFormat='{}{0:dd/MM}'}" />
+                                    <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center"  Grid.Column="2" Text="{Binding Maquina} "/>
+                                    <Label TextColor="White" Grid.Row="0" Margin="1" VerticalTextAlignment="Center"  Grid.Column="3" Text="{Binding Realizado}" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
