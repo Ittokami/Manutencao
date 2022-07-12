@@ -1,0 +1,1469 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.CheckList.CheckGabriel"
+             BackgroundColor="#18191A">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Enviar"
+                     IconImageSource="SaveIcon"
+                     Order="Primary"
+                     Command="{Binding SaveCheck1}"/>
+
+        <ToolbarItem Text="Novo"
+                     IconImageSource="Update"
+                     Command="{Binding AttCheck1}"/>
+
+    </ContentPage.ToolbarItems>
+
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" >
+            <Grid>
+                <StackLayout Padding="0" Margin="1,10">
+                    <StackLayout Orientation="Vertical">
+                        
+                        <Label Text="AÉREO - 23" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG1}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE ROLDANA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG1 }" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TÚNEL DE PINTURA - 15" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG2}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ESTRUTURA DAS PORTAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS ROLOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORDINHAS DE NYLON:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE MOLA(GUIA):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG2}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="ESTEIRA DE PINTURA - 14" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG3}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR ROLAMENTOS DO ROLO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORRENTE:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA DE TRANSPORTE:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR MOTOR ESTUFA (RUIDO E AVARIAS):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORDINHAS DE NYLON:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS MANCAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NÍVEL DE ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG3}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="ESTEIRA / PINTURA LAKA - 17" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG4}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORRENTES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ENGRAXAMENTO DE MANCAIS DOS ROLOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORDINHAS DE NYLON:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG4}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="MEDIDEIRA - 19" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG5}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS ROLOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORDINHAS DE NYLON:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG5}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="MOLISSA - 899" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG6}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS MANCAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE ESTEIRA DE PANO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG6 }" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="MOLISSA - 831" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG7}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS MANCAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE ESTEIRA DE PANO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG7}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="PRENSA ESTAMPA - 674" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG8}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR DESGASTE EM FILTRO DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE PARAFUSOS DA BASE DA CHAPA  ESTÃO SOLTOS OU QUEBRADOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE HÁ VAZAMENTOS NA MÁQUINA::" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG8}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="PRENSA ESTAMPA - 654" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG9}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR DESGASTE EM FILTRO DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE PARAFUSOS DA BASE DA CHAPA  ESTÃO SOLTOS OU QUEBRADOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE HÁ VAZAMENTOS NA MÁQUINA::" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG9}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="PRENSA ESTAMPA - 821" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG10}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR DESGASTE EM FILTRO DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE PARAFUSOS DA BASE DA CHAPA  ESTÃO SOLTOS OU QUEBRADOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE HÁ VAZAMENTOS NA MÁQUINA::" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG10}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="PRENSA ESTAMPA - 868" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG11}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR DESGASTE EM FILTRO DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE PARAFUSOS DA BASE DA CHAPA  ESTÃO SOLTOS OU QUEBRADOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE HÁ VAZAMENTOS NA MÁQUINA::" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG11}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="PRENSA ESTAMPA - 21" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG12}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR DESGASTE EM FILTRO DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE PARAFUSOS DA BASE DA CHAPA  ESTÃO SOLTOS OU QUEBRADOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR SE HÁ VAZAMENTOS NA MÁQUINA::" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG12}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TOGLEN - 830" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG13}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="INSPEÇÃO EM ROLAMENTO E MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG13 }" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TOGLEN - 878" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG14}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="INSPEÇÃO EM ROLAMENTO E MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG14}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TOGLEN - 25" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG15}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="INSPEÇÃO EM ROLAMENTO E MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs15 }" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TOGLEN - 26" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia16}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="INSPEÇÃO EM ROLAMENTO E MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG16}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TOGLEN - 49" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG17}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="INSPEÇÃO EM ROLAMENTO E MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG17}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="TOGLEN - 873" Margin="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG18}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="INSPEÇÃO EM ROLAMENTO E MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG18}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="BAUCE - 29" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG19}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LUBRIFICAÇÃO DOS TRILHOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ATIVIDADE ANORMAL NA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG19}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 1 - 892" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG20}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG20}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 2 - 31" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG21}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG21}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 3 - 32" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG22}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG22}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 4 - 816" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG23}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG23}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 5 - 34" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG24}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG24}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 6 - 35" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG25}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG25}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="FULÃO 7 - 8" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG26}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TENSÃO DAS CORREIAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="GRAXA NOS EIXOS DA MÁQUINA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ÓLEO CAIXA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG26}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="LIXADEIRA - 9" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG27}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORREIA REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CORRENTE REDUTORA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ENGRAXAR MANCAIS DOS ROLOS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NIVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG27}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="DIVISORA - 628" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG28}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="VERIFICAR DESGASTE NAVALHA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE ANÉIS DE INOX:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE CONTRA-FACA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NO MANCAL:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE ROLO DE BORRACHA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ENGRAXAR MANCAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NIVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG28}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="REBAIXADEIRA - 51" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG29}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TROCA DE ESMERIL DA NAVALHA A CADA 1 ANO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TROCA DE NAVALHA CADA 6 MESES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ANÁLISE DO ÓLEO (1 VEZ POR ANO):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FILTRAGEM DE ÓLEO (1 VEZ POR ANO):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="DESGASTE DE MANGUEIRAS HIDRÁULICAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="RUIDOS ANORMAIS NA MÁQUINA (ROLAMENTOS):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ENGRAXAR MANCAIS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NIVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG29}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="COMPRESSOR 1 - 867" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG30}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FILTRO DE AR (TROCA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LIMPEZA RADIADOR (LIMPEZA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ESGOTAMENTO DE ÁGUA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TROCA DE ÓLEO E FILTRO DE ÓLEO CADA 4.000 HORAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG30}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="COMPRESSOR 2 - 357" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG31}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FILTRO DE AR (TROCA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LIMPEZA RADIADOR (LIMPEZA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ESGOTAMENTO DE ÁGUA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TROCA DE ÓLEO E FILTRO DE ÓLEO CADA 4.000 HORAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG31}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="COMPRESSOR 3 - 722" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG32}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FILTRO DE AR (TROCA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LIMPEZA RADIADOR (LIMPEZA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ESGOTAMENTO DE ÁGUA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TROCA DE ÓLEO E FILTRO DE ÓLEO CADA 4.000 HORAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG32}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="COMPRESSOR 4 - 726" Margin="1" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding DiaG33}"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FILTRO DE AR (TROCA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="LIMPEZA RADIADOR (LIMPEZA MENSAL):" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ESGOTAMENTO DE ÁGUA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="NÍVEL DE ÓLEO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="TROCA DE ÓLEO E FILTRO DE ÓLEO CADA 4.000 HORAS:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Frame  Margin="1" Padding="1" BorderColor="Gray" />
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding ObsG33}" />
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>
+                                 

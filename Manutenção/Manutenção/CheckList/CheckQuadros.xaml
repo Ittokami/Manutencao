@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.CheckList.CheckQuadros"             
+             BackgroundColor="#18191A">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Enviar"
+                     IconImageSource="SaveIcon"
+                     Order="Primary"
+                     Command="{Binding SaveCheck5}"/>
+
+        <ToolbarItem Text="Novo"
+                     IconImageSource="Update"
+                     Command="{Binding AttCheck5}"/>
+
+    </ContentPage.ToolbarItems>
+</ContentPage>

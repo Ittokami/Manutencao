@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.Views.DetalhesRato"
+             BackgroundColor="#18191A">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Enviar"
+                     IconImageSource="SaveIcon"
+                     Order="Primary"
+                     Command="{Binding SalvarAtv}"/>
+
+    </ContentPage.ToolbarItems>
+
+        <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" >
+                <StackLayout>
+
+                    <Grid>
+                        <StackLayout Margin="5">
+                            <Label Text="GERAR ORDEM DE SERVIÇOS" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="24" FontAttributes="Bold"/>
+                        </StackLayout>
+
+
+                    <StackLayout Padding="0" Margin="1,20">
+                        <Label Text="{Binding ID}" ></Label>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout Orientation="Vertical" >
+
+                                <Label Text="OCORRÊNCIA" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+
+                                <StackLayout Orientation="Horizontal" Margin="0,5" >
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                                    <Label FontSize="16" Margin="1" TextColor="White" Text="{Binding Data1, StringFormat='{}{0:dd/MM}'}"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Margin="0,5" >
+                                    <Label VerticalOptions="Center" Text="INÍCIO DA OCORRÊNCIA: " FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                                    <Label TextColor="White" FontSize="16" Text="{Binding Timing}" />
+                                </StackLayout>
+
+                                <Label Margin="2" Text="MANUTENÇÃO" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+
+                                <StackLayout Orientation="Horizontal" Margin="0,5" >
+                                    <Label VerticalOptions="Center" Text="INICIO MANUTENÇÃO: " FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                                    <TimePicker Format="HH:mm:ss" TextColor="White" FontSize="16" Time="{Binding Inicio}" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Margin="0,2" >
+
+                                    <Label VerticalOptions="Center" Text="DATA: " FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Format="dd/MM/yyyy" TextColor="White" FontSize="16" Date="{Binding DataFim}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="0,2">
+                                    <Label VerticalOptions="Center" Text="FIM MANUTENÇÃO: " FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                                    <TimePicker Format="HH:mm:ss" TextColor="White" FontSize="16" Time="{Binding Fim}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout Orientation="Vertical" Margin="1">
+                                <Label  Text="SETOR:" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Label TextColor="White" HorizontalTextAlignment="Center" Text="{Binding SetorX}" />
+
+                                <StackLayout Orientation="Horizontal" Padding="1,20,1,1">
+                                    <Label Text="Nº:" VerticalOptions="Center" FontSize="18" FontAttributes="Bold" TextColor="White" ></Label>
+                                    <Label TextColor="White" HorizontalTextAlignment="Center" WidthRequest="60" FontSize="18" Text="{Binding Patrimonio}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Padding="1,20,1,1">
+                                    <Label Text="MÁQ.:" VerticalOptions="Center" FontSize="18" FontAttributes="Bold" TextColor="White" ></Label>
+                                    <Label TextColor="White" WidthRequest="200" Margin="1" FontSize="18" Text="{Binding Maquina}" />
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5" >
+                            <StackLayout>
+                                <Label Text="DESCRIÇÃO DO EQUIPAMENTO:" FontSize="20" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Label FontSize="16" TextColor="White" HorizontalOptions="FillAndExpand" Text="{Binding Equipamento}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5" >
+                            <StackLayout >
+                                <Label Text="DESCRIÇÃO DO PROBLEMA:" FontSize="20" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Label FontSize="16" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand"  Text="{Binding Descricao}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5" >
+                            <StackLayout>
+                                <Label Text="RESPONSÁVEL PELO SETOR:" FontSize="20" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Label FontSize="16" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" Text="{Binding Responsavel}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5" >
+                            <StackLayout>
+                                <Label Text="SERVIÇO REALIZADO:" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry Keyboard="Chat" Placeholder="Descrição do Serviço Realizado:" FontSize="16" PlaceholderColor="LightGray" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" Text="{Binding Realizado}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5" >
+                            <StackLayout>
+                                <Label Text="TÉCNICO EXECUTANTE:" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry Keyboard="Chat" Placeholder="Nome do Técnico Executante" FontSize="16" PlaceholderColor="LightGray" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" Text="{Binding Executante}" />
+                                        <Entry Keyboard="Chat" Placeholder="Nome do Técnico Executante" FontSize="16" PlaceholderColor="LightGray" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" Text="{Binding Executante1}" />
+                                        <Entry Keyboard="Chat" Placeholder="Nome do Técnico Executante" FontSize="16" PlaceholderColor="LightGray" TextColor="White" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" Text="{Binding Executante2}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+                </StackLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage>

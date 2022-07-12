@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.CheckList.CheckEleandro"
+             BackgroundColor="#18191A">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Enviar"
+                     IconImageSource="SaveIcon"
+                     Order="Primary"
+                     Command="{Binding SaveCheck}"/>
+
+        <ToolbarItem Text="Novo"
+                     IconImageSource="Update"
+                     Command="{Binding AttCheck}"/>
+
+    </ContentPage.ToolbarItems>
+
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" >
+            <Grid>
+                <StackLayout Padding="0" Margin="1,10">
+                    <StackLayout Orientation="Vertical">
+                        
+                        <Label Text="ROBÔ ASPERAGEM ABB - 967" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia1}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRAME:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs1 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia2}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRESA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs2 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia3}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="PINÇA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs3 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia4}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="SISTEMA PNEUMÁTICO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs4 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia5}"/>
+                                </StackLayout>
+                                <Label Text="MANUTENÇÃO:" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ELÉTRICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="MECÂNICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs5}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="ROBÔ ASPERAGEM KAWASAKI KADESH - 320" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia6}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRAME:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs6 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia7}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRESA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs7 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia8}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="PINÇA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs8 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia9}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="SISTEMA PNEUMÁTICO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs9 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia10}"/>
+                                </StackLayout>
+                                <Label Text="MANUTENÇÃO:" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ELÉTRICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="MECÂNICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs10}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="ROBÔ ASPERAGEM KAWASAKI IMBISEG - 331" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia11}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRAME:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs11 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia12}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRESA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs12 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia13}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="PINÇA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs13 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia14}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="SISTEMA PNEUMÁTICO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs14 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia15}"/>
+                                </StackLayout>
+                                <Label Text="MANUTENÇÃO:" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ELÉTRICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="MECÂNICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs15}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Label Text="ROBÔ ASPERAGEM AUTEC - 730" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                        <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                            <StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia16}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRAME:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs16 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia17}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="FRESA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs17 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia18}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="PINÇA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs18 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia19}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="SISTEMA PNEUMÁTICO:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs19 }" />
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame  Margin="5"  Padding="1" BorderColor="Gray" />
+
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Margin="1" VerticalOptions="Center" Text="DATA: " FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                                    <DatePicker Margin="1" Format="dd/MM/yyyy" FontSize="16" TextColor="White" Date="{Binding Dia20}"/>
+                                </StackLayout>
+                                <Label Text="MANUTENÇÃO:" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                                <StackLayout Orientation="Horizontal" Margin="2">
+                                    <Label Text="ELÉTRICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="MECÂNICA:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                                    <RadioButton Content="OK" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                    <RadioButton Content="CORREÇÃO" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="OBSERVAÇÕES:" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" CornerRadius="20">
+                                    <StackLayout>
+                                        <Entry FontSize="14" Keyboard="Chat" TextColor="White" WidthRequest="180" Margin="1" Text="{Binding Obs20}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>

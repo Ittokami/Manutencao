@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+       xmlns:local="clr-namespace:Manutenção.Views" xmlns:local1="clr-namespace:Manutenção.CheckList"
+       x:Class="Manutenção.MainPage">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <!--
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            -->
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!--
+            Custom Style you can apply to any Flyout Item
+            -->
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Route="PrincipalPage"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Página Principal" 
+             Icon="escrever"
+             Route="MainPage">
+
+            <ShellContent Title="MECÂNICA"
+                              Route="CadastroAtividade"
+                              Icon="MecanicoIcon">
+                <local:CadastroAtividade/>
+            </ShellContent>
+            <ShellContent Title="ELÉTRICA"
+                              Route="CadastroEletrica">
+                <local:CadastroEletrica/>
+            </ShellContent>
+            <ShellContent Title="CIVIL"
+                              Route="CadastroCivil">
+                <local:CadastroCivil/>
+            </ShellContent>
+            
+        </Tab>
+
+        <Tab Title="Relatórios Gerados" 
+             Icon="desc" 
+             Route="Relatorios">
+            <ShellContent Title="MECÂNICA"
+                              Route="MinhasAtividades"
+                              Icon="MecanicoIcon">
+                <local:ListaAtividades/>
+            </ShellContent>
+            <ShellContent Title="ELÉTRICA"
+                              Route="EletricaAtividades">
+                <local:ListaEletrica/>
+            </ShellContent>
+            <ShellContent Title="CIVIL"
+                              Route="CivilAtividades">
+                <local:ListaCivil/>
+            </ShellContent>
+            
+        </Tab>
+
+    </FlyoutItem>
+
+    <FlyoutItem Route="CheckListPage"               
+                FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Check - List" 
+             Icon="checklist"
+             Route="PrincipalCheck">
+            
+            <ShellContent Title="ADRECESE"                    
+                      Route="CheckCezao">
+                <local1:CheckCezao/>
+            </ShellContent>
+
+            <ShellContent Title="ELEANDRO"                    
+                      Route="CheckEleandro">
+                <local1:CheckEleandro/>
+            </ShellContent>
+
+            <ShellContent Title="JOSÉ GABRIEL"                    
+                      Route="CheckGabriel">
+                <local1:CheckGabriel/>
+            </ShellContent>
+
+            <ShellContent Title="JOSÉ CARLOS"                    
+                      Route="CheckZe"
+                      Icon="checklist">
+                <local1:CheckZe/>
+            </ShellContent>
+
+            <ShellContent Title="LUCAS BASTOS"                    
+                      Route="CheckQuadros"
+                      Icon="checklist">
+                <local1:CheckQuadros/>
+            </ShellContent>
+
+            <ShellContent Title="LUCAS EDUARDO"                    
+                      Route="CheckLucas"
+                      Icon="checklist">
+                <local1:CheckLucas/>
+            </ShellContent>
+
+            <ShellContent Title="LUIS CARLOS"                    
+                      Route="CheckLuis"
+                      Icon="checklist">
+                <local1:CheckLuis/>
+            </ShellContent>
+
+            <ShellContent Title="PATRICK"                    
+                      Route="CheckPatrick"
+                      Icon="checklist">
+                <local1:CheckPatrick/>
+            </ShellContent>
+
+            <ShellContent Title="TIAGO OSTACHEVISKI"                    
+                      Route="CheckOstacheviski"
+                      Icon="checklist">
+                <local1:CheckOstacheviski/>
+            </ShellContent>
+
+            <ShellContent Title="TIAGO URBAM"                    
+                      Route="CheckUrbam"
+                      Icon="checklist">
+                <local1:CheckUrbam/>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Lista" 
+             Icon="desc"
+             Route="ResultCheck">
+
+            <ShellContent Title="ADRECESE"                    
+                      Route="ResultCezao">
+                <local1:ResultCezao/>
+            </ShellContent>
+
+            <ShellContent Title="ELEANDRO"                    
+                      Route="ResultEleandro">
+                <local1:ResultEleandro/>
+            </ShellContent>
+
+            <ShellContent Title="JOSÉ GABRIEL"                    
+                      Route="ResultGabriel">
+                <local1:ResultGabriel/>
+            </ShellContent>
+
+            <ShellContent Title="JOSÉ CARLOS"                    
+                      Route="ResultZe">
+                <local1:ResultZe/>
+            </ShellContent>
+
+            <ShellContent Title="LUCAS BASTOS"                    
+                      Route="ResultQuadros">
+                <local1:ResultQuadros/>
+            </ShellContent>
+
+            <ShellContent Title="LUCAS EDUARDO"                    
+                      Route="ResultLucas">
+                <local1:ResultLucas/>
+            </ShellContent>
+
+            <ShellContent Title="LUIS CARLOS"                    
+                      Route="ResultLuis">
+                <local1:ResultLuis/>
+            </ShellContent>
+
+            <ShellContent Title="PATRICK"                    
+                      Route="ResultPatrick">
+                <local1:ResultPatrick/>
+            </ShellContent>
+
+            <ShellContent Title="TIAGO OSTACHEVISKI"                    
+                      Route="ResultOstacheviski">
+                <local1:ResultOstacheviski/>
+            </ShellContent>
+
+            <ShellContent Title="TIAGO URBAM"                    
+                      Route="ResultUrbam">
+                <local1:ResultUrbam/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+
+    <FlyoutItem Route="ChatPage"               
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Chat"
+                      Icon="chat"
+                      ContentTemplate="{DataTemplate local:ChatPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Route="FuncionariosChat"               
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Funcionarios"
+                      Icon="contatos"
+                      ContentTemplate="{DataTemplate local:FuncionariosChat}" />
+
+    </FlyoutItem>
+
+
+    <FlyoutItem Route="ItemsPage"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Configurações"
+                      Icon="Icon1"
+                      ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+    <MenuItem Text="Sair" />
+    </Shell>

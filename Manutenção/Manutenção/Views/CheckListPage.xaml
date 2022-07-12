@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.Views.CheckListPage"
+             Title="Check List"
+             BackgroundColor="#18191A">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="CustomRadioTemplate">
+                <Grid>
+                    <Ellipse x:Name="CheckedCircle" 
+                             Fill="#800909" Stroke="Black" StrokeThickness="2"
+                             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <Ellipse x:Name="UncheckedCircle"
+                             Fill="Transparent"                            
+                             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <ContentPresenter />
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CheckedState">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="CheckedCircle" Property="IsVisible"  Value="True"/>
+                                        <Setter TargetName="UncheckedCircle" Property="IsVisible" Value="False"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="CheckedCircle" Property="IsVisible" Value="False"/>
+                                        <Setter TargetName="UncheckedCircle" Property="IsVisible" Value="True"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" >
+            <StackLayout>
+                <StackLayout>
+                    <ScrollView HorizontalScrollBarVisibility="Never" AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <Grid ColumnDefinitions="100,100,100,100,100,100,100,100,100,100"
+                          RowDefinitions="100"                                 
+                          Margin="15"
+                          VerticalOptions="Center">
+
+                            <RadioButton Grid.Column="0"
+                                     GroupName="Group1" 
+                                     x:Name="Adrecese"       
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="EletricaIcon"/>
+                                        <Label Text="ADRECESE" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="1"
+                                     GroupName="Group1"
+                                     x:Name="Eleandro" 
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="ELEANDRO" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="2"
+                                     GroupName="Group1" 
+                                     x:Name="Zecarlos" 
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="JOSÉ CARLOS" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="3"
+                                     GroupName="Group1"
+                                     x:Name="Gabriel"         
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="JOSÉ GABRIEL" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="4"
+                                     GroupName="Group1" 
+                                     x:Name="Eduardo"
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="LUCAS EDUARDO" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="5"
+                                     GroupName="Group1"
+                                     x:Name="Quadros"  
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="LUCAS QUADROS" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="6"
+                                     GroupName="Group1"
+                                     x:Name="Luis"         
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="EletricaIcon"/>
+                                        <Label Text="LUIS CARLOS" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="7"
+                                     GroupName="Group1"
+                                     x:Name="Patrick"         
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="PATRICK GOMES" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="8"
+                                     GroupName="Group1"
+                                     x:Name="Ostacheviski"         
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="TIAGO OS." HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton Grid.Column="9"
+                                     GroupName="Group1"                                      
+                                     x:Name="Urbam" 
+                                     ControlTemplate="{StaticResource CustomRadioTemplate}">
+                                <RadioButton.Content>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                        <Image Source="MecanicoIcon"/>
+                                        <Label Text="TIAGO URBAM" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+                
+            <StackLayout Padding="10">
+                    <Frame BackgroundColor="#111b21" HasShadow="True" CornerRadius="5">
+                        <StackLayout Padding="2" HeightRequest="450">
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>
+                

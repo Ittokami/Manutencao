@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Manutenção.Views.FuncionariosChat">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="LISTAGEM DE FUNCIONÁRIOS" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold" />
+            <SearchBar x:Name="pesquisaCliente" Placeholder="Informe a pesquisa" TextChanged="PesquisaCliente_TextChanged" />
+            <ListView x:Name="ListViewCliente" />
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
